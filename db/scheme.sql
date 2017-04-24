@@ -5,28 +5,29 @@ CREATE TABLE country (
 
 CREATE TABLE manufacturer (
 	id SERIAL PRIMARY KEY,
-	name TEXT,
-	country INTEGER REFERENCES country
+	name TEXT NOT NULL,
+	country INTEGER REFERENCES country NOT NULL
 );
 
 CREATE TABLE beer (
 	id SERIAL PRIMARY KEY,
-	name TEXT UNIQUE,
-	review TEXT,
-	grade_taste CHAR(1),
-	grade_color CHAR(1),
-	grade_smell CHAR(1),
-	grade_smoothness CHAR(1),
-	grade_foam CHAR(1),
-	grade_total CHAR(1),
-	image TEXT,
-	manufacturer INTEGER REFERENCES manufacturer 
+	name TEXT UNIQUE NOT NULL,
+	review TEXT NOT NULL,
+	grade_taste CHAR(1) NOT NULL,
+	grade_color CHAR(1) NOT NULL,
+	grade_smell CHAR(1) NOT NULL,
+	grade_smoothness CHAR(1) NOT NULL,
+	grade_foam CHAR(1) NOT NULL,
+	grade_total CHAR(1) NOT NULL,
+	alc TEXT,
+	image TEXT NOT NULL,
+	manufacturer INTEGER REFERENCES manufacturer NOT NULL
 );
 
 CREATE TABLE burger (
 	id SERIAL PRIMARY KEY,
-	name TEXT,
-	grade CHAR(1),
-	review TEXT,
-	manufacturer INTEGER REFERENCES manufacturer
+	name TEXT NOT NULL,
+	grade CHAR(1) NOT NULL,
+	review TEXT NOT NULL,
+	manufacturer INTEGER REFERENCES manufacturer NOT NULL
 );
