@@ -20,7 +20,7 @@ CREATE TABLE beer (
 	grade_foam CHAR(1),
 	grade_total CHAR(1),
 	image TEXT,
-	manufacturer INTEGER REFERENCES review
+	manufacturer INTEGER REFERENCES manufacturer 
 );
 
 CREATE TABLE burger (
