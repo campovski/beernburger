@@ -2,8 +2,11 @@
 <html>
 <head>
 	{% load static %}
-	
-	<link rel="stylesheet" type="text/css" href="{% static 'css/beer_detail.css' %}" />
+	<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon1.png' %}"/>
+	<title>Review: {{ beer.name }}</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/app_detail.css' %}" />
 	<style>
 		html
 		{
@@ -22,25 +25,25 @@
 	<h1 class="name">{{ beer.name }}</h1>
 	<h2 class="brewer">{{ brewer.name }} -- {{ brewer.country }}</h2>
 	<p class="review"> {{ beer.review }}</p>
-<div class="grades">
-	<p class="grades">
-		<b>TOTAL: {{ beer.grade_total }}</b><br>
-		<i>Color:</i> <b>{{ beer.grade_color }}</b><br>
-		<i>Taste:</i> <b>{{ beer.grade_taste }}</b><br>
-		<i>Smell:</i> <b>{{ beer.grade_smell }}</b><br>
-		<i>Smoothness:</i> <b>{{ beer.grade_smoothness }}</b><br>
-		<i>Foam:</i> <b>{{ beer.grade_foam }}</b><br><br>
-		<i>Type: {{ beer.beer_type }}</i><br>
-		<i>Alc.: {{ beer.alc }}%</i>
-		{% if beer.price != '0' %}
-			<i>Price: {{ beer.price }}</i>
-		{% endif %}
-	</p>
-	{% load static %}
-	{% with 'images/'|add:beer.image as static_image %}
-		<img src="{% static static_image %}" alt="Image of {{ beer.name }}">
-	{% endwith %}
-</div>
+	<div class="grades">
+		<p class="grades">
+			<b>TOTAL: {{ beer.grade_total }}</b><br>
+			<i>Color:</i> <b>{{ beer.grade_color }}</b><br>
+			<i>Taste:</i> <b>{{ beer.grade_taste }}</b><br>
+			<i>Smell:</i> <b>{{ beer.grade_smell }}</b><br>
+			<i>Smoothness:</i> <b>{{ beer.grade_smoothness }}</b><br>
+			<i>Foam:</i> <b>{{ beer.grade_foam }}</b><br><br>
+			<i>Type: {{ beer.beer_type }}</i><br>
+			<i>Alc.: {{ beer.alc }}%</i>
+			{% if beer.price != '0' %}
+				<i>Price: {{ beer.price }}</i>
+			{% endif %}
+		</p>
+		{% load static %}
+		{% with 'images/'|add:beer.image as static_image %}
+			<img src="{% static static_image %}" alt="Image of {{ beer.name }}">
+		{% endwith %}
+	</div>
 </div>
 </body>
 </html>

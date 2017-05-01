@@ -1,0 +1,76 @@
+div.reviewPage
+{
+	max-width: 1080px;
+	margin: auto;
+	display: block;
+	background: rgba(255,255,255, 0.7);
+	padding: 2% 3%;
+}
+
+h1.name
+{
+	text-align: center;
+	font-family: "Courier", "Courier New", monospace;
+	text-decoration: overline underline;
+	text-shadow: 1px 1px red;
+	font-size: 40px;
+}
+
+h2.brewer
+{
+	text-align: center;
+	font-family: "Courier", "Courier New", monospace;
+	font-style: italic;
+	font-size: 15px;
+}
+
+p.review
+{
+	text-align: justify;
+	font-family: "Times New Roman", Times;
+	font-size: 150%;
+}
+
+div.grades
+{
+	overflow: hidden;
+	margin: 20px 20px 20px 20px;
+	font-size: 130%;
+}
+
+p.grades
+{
+	float: left;
+	margin-top: 8%;
+	margin-left: 5%;
+}
+
+img
+{
+	float: right;
+	width: 60%;
+}
+
+/*--------------------------------
+----------------------------------
+------- MEDIA QUERIES ------------
+----------------------------------
+--------------------------------*/
+
+@media screen and (max-width: 1000px) {
+	p.grades {
+		margin-top: 5%;
+		margin-left: 3%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	p.grades {
+		margin-bottom: 10%;
+		margin-left: 25%;
+	}
+
+	img {
+		width: 100%;
+	}
+}
