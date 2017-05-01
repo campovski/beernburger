@@ -1,0 +1,384 @@
+@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans';
+
+/* BROWN COLOR: #562c00 + socket: #261300 */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	background: #f5f5f5;
+	color: #67727a;
+	font-family: "Alegreya Sans", sans-serif;
+	margin: 0;
+}
+
+h2 {
+	font-size: 450%;
+	font-family: "Courier", monospace;
+	font-weight: 1000;
+	text-align: center;
+	color: #000000;
+}
+
+h3 {
+	font-size: 300%;
+	font-family: "Courier", monospace;
+	line-height: 200%;
+	font-weight: 1000;
+	color: #ffffff;
+}
+
+p {
+	font-size: 160%;
+	line-height: 150%;
+	padding: 3%;
+	text-indent: 2%;
+	text-align: justify;
+}
+
+img {
+	max-width:100%;
+	height: auto;
+	width: auto;
+	margin-bottom: -4px;
+}
+
+header {
+	background-color: #000000;
+	width: 100%;
+	height: 86px;
+}
+
+#header-inner {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+#logo {
+	margin: 20px;
+	float: left;
+	width: 200px;
+	height: 60px;
+	background: url(../images/logo.png) no-repeat center;
+}
+
+/*-- START NAVIGATION STYLE --*/
+nav {
+	float: right;
+	padding: 25px 20px 0 0;
+}
+
+#menu-icon {
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: url(../images/nav.png) center;
+}
+
+a:hover#menu-icon {
+	border-radius: 4px 4px 0 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+nav ul li {
+	font-family: "Alegreya Sans", sans-serif;
+	font-size: 150%;
+	display: inline-block;
+	float: left;
+	padding: 10px;
+}
+
+nav ul li a {
+	color: #f5f5f5;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	color: #c3d7df;
+}
+
+.current {
+	color: #c3d7df;
+}
+/*-- END NAVIGATION STYLE --*/
+
+.banner {
+	width: 100%;
+	background-color: #000000;
+}
+
+.banner-inner {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+/*-- I did this myself - prepared for image background --*/
+.columns {
+
+}
+
+.section-wrapper {
+	position: relative;
+	width: 25%;
+	float: left;
+	text-align: center;
+}
+
+.one-fourth {
+	max-width: 100%;
+	position: absolute;
+	top: 0;
+ 	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.8);
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity .2s, visibility .2s;
+}
+
+.section-wrapper:hover .one-fourth {
+	visibility: visible;
+	display: block;
+	opacity: 1;
+}
+
+.image-section {
+	max-width: 100%;
+	height: auto;
+}
+
+/*.one-fourth {
+	width: 25%;
+	float: left;
+	text-align: center;
+}*/
+
+#beer-wrapper {
+	background-color: #ffd700;
+}
+
+#burger-wrapper {
+	background-color: #f3d5a5;
+}
+
+#maths-wrapper {
+	background-color: #aadcd2;
+}
+
+#code-wrapper {
+	background-color: #70b5ff;
+}
+
+.one-fourth i {
+	color: #f0f0f0;
+	font-size: 300%;
+	padding: 20% 0 0 0;
+}
+
+#heart {
+	background-color: #ff0000;
+	clear: both;
+	border-top: 3px solid #960000;
+}
+
+/*-- START FOOTER STYLE --*/
+footer {
+	background-color: rgba(0,0,0,0.8);
+	width: 100%;
+}
+
+.social {
+	list-style-type: none;
+	text-align: center;
+}
+
+.social li {
+	display: inline;
+}
+
+.social i {
+	font-size: 450%;
+	margin: 1%;
+	padding: 1% 5% 1% 5%;
+	color: #d8bea2;
+}
+
+.social i:hover {
+	color: #f7f4f2;
+}
+
+.socket {
+	border-top: 2px solid #7a3500;
+	background-color: #000000;
+	max-height: 55px;
+}
+
+.socket p {
+	padding: 5px 0 9px 0;
+	text-align: center;
+	color: #f5f5f5;
+}
+
+
+/*--------------------------------
+----
+---- MEDIA QUERIES FOR MOBILE ----
+----
+---------------------------------*/
+
+@media screen and (max-width: 1400px) {
+	#code-wrapper h3 {
+		font-size: 200%;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	h2 {
+		font-size: 200%;
+	}
+	
+	h3 {
+		font-size: 180%;
+	}
+
+	#code-wrapper h3 {
+		font-size: 120%;
+	}
+
+	.one-fourth i {
+		padding: 15% 0 0 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	h2 {
+		font-size: 150%;
+	}
+	
+	h3 {
+		display: inline;
+		font-size: 600%;
+		padding-left: 50px;
+	}
+
+	#code-wrapper h3 {
+		font-size: 300%;
+	}
+	
+	p {
+		font-size: 100%;
+	}
+	
+	header {
+		position: absolute;
+	}
+	
+	#logo {
+		margin: 15px 0 20px -25px;
+		background: url(../images/logo_mobile.png) no-repeat center;
+	}
+	
+	#menu-icon {
+		display: inline-block;
+	}
+	
+	nav ul, nav:active ul {
+		display: none;
+		z-index: 1000;
+		position: absolute;
+		padding: 2% 2% 2% 0;
+		background: #000000;
+		right: 20px;
+		top: 60px;
+		border: 2px solid #f5f5f5;
+		border-radius: 5px 0 5px 5px;
+		width: 200px;
+	}
+	
+	nav:hover ul {
+		display: block;
+	}
+	
+	nav li {
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+	}
+	
+	.banner {
+		padding-top: 86px;
+	}
+	
+	.section-wrapper {
+		float: left;
+		width: 100%;
+	}
+	
+	.one-fourth i {
+		font-size: 700%;
+		padding: 25% 0 0 0;
+	}
+	
+	.social i {
+		font-size: 250%;
+		padding: 2% 8% 2% 8%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.one-fourth i {
+		font-size: 550%;
+	}
+
+	h3 {
+		font-size: 300%;
+	}
+
+	#code-wrapper h3 {
+		font-size: 150%;
+	{
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

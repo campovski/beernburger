@@ -1,0 +1,7 @@
+*~
+settings.py
+bnbenv
+__pycache__
+*.pyc
+
+

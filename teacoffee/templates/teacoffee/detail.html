@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'css/beer_detail.css' %}" />
+	<style>
+		html
+		{
+			{% with 'images/'|add:beer.image as static_image %}
+				background: url("{% static static_image %}") no-repeat center center fixed;
+			{% endwith %}
+			-webkit-backgorund-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+	</style>
+</head>
+<body>
+<div class="reviewPage">
+	<h1 class="name">{{ beer.name }}</h1>
+	<h2 class="brewer">{{ brewer.name }} -- {{ brewer.country }}</h2>
+	<p class="review"> {{ beer.review }}</p>
+<div class="grades">
+	<p class="grades">
+		<b>TOTAL: {{ beer.grade_total }}</b><br>
+		<i>Color:</i> <b>{{ beer.grade_color }}</b><br>
+		<i>Taste:</i> <b>{{ beer.grade_taste }}</b><br>
+		<i>Smell:</i> <b>{{ beer.grade_smell }}</b><br>
+		<i>Smoothness:</i> <b>{{ beer.grade_smoothness }}</b><br>
+		<i>Foam:</i> <b>{{ beer.grade_foam }}</b><br><br>
+		<i>Type: {{ beer.beer_type }}</i><br>
+		<i>Alc.: {{ beer.alc }}%</i>
+		{% if beer.price != '0' %}
+			<i>Price: {{ beer.price }}</i>
+		{% endif %}
+	</p>
+	{% load static %}
+	{% with 'images/'|add:beer.image as static_image %}
+		<img src="{% static static_image %}" alt="Image of {{ beer.name }}">
+	{% endwith %}
+</div>
+</div>
+</body>
+</html>

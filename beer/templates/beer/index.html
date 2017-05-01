@@ -1,0 +1,59 @@
+<html>
+
+{% load static %}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Campovski's Beer Reviews</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon1.png' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/beer_index.css' %}" />
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <header>
+        <div id="header-inner">
+            <a href="http://campovski.eu" id="logo"></a>
+            <nav>
+             <a href="#" id="menu-icon"></a>
+                <ul id="menu">
+                    <li>Sort by:</li>
+                    <li><a href="{% url 'beer:sort' 'grade_total' %}">grade (asc)</a></li>
+                    <li><a href="{% url 'beer:sort' '-grade_total' %}">grade (desc)</a></li>
+                    <li><a href="{% url 'beer:sort' 'id' %}">id (asc)</a></li>
+                    <li><a href="{% url 'beer:index' %}">id (desc)</a></li>
+                    <li><a href="{% url 'beer:sort' 'name' %}">name (asc)</a></li>
+                    <li><a href="{% url 'beer:sort' '-name' %}">name (desc)</a></li>
+                </ul>
+             </nav>
+                <form action="#">
+                    <input type="text" name="search" id="search" placeholder="Search..." onkeypress="handle(event, document.getElementById('search').value)" />
+                </form>
+
+                <script>
+                    function handle(e, search){
+			if (e.keyCode == 13){
+                            e.preventDefault();
+                            if (search){
+                                window.location.href = "http://campovski.eu/beer/search=".concat(search);
+                            }
+                        }
+                    }
+                </script>
+        </div>
+    </header>
+<!-- END OF HEADER -->
+    <div id="page">
+        {% for beer in all_beers %}
+            <div class="tile">
+                <a href="{% url 'beer:detail' beer.id %}">
+                    {% with 'images/'|add:beer.image_tile as tile %}
+                        <img src="{% static tile %}" alt="{{ beer.name }}">
+                    {% endwith %}
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

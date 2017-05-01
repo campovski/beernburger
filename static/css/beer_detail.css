@@ -1,0 +1,53 @@
+div.reviewPage
+{
+	max-width: 1080px;
+	margin: auto;
+	display: block;
+	background: rgba(255,255,255, 0.6);
+	padding: 30px 50px 20px 50px;
+}
+
+h1.name
+{
+	text-align: center;
+	font-family: "Courier", "Courier New", monospace;
+	text-decoration: overline underline;
+	text-shadow: 1px 1px red;
+	font-size: 40px;
+}
+
+h2.brewer
+{
+	text-align: center;
+	font-family: "Courier", "Courier New", monospace;
+	font-style: italic;
+	font-size:15px;
+}
+
+p.review
+{
+	text-align: justify;
+	font-family: "Times New Roman", Times;
+	font-size: 1.5em;
+}
+
+div.grades
+{
+	overflow: hidden;
+	margin: 20px 20px 20px 20px;
+	font-size: 1.3em;
+}
+
+p.grades
+{
+	float: left;
+	margin-top: 115px;
+	margin-left: 50px;
+}
+
+img
+{
+	float: right;
+	width: 600px;
+	height:450px;
+}

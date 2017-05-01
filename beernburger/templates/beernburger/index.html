@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+
+{% load static %}
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Campovski's Loveroom</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}" />	
+	<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet"/>
+	<link rel="shortcut icon" type="image/png" href="{% static 'images/favicon1.png' %}"/>
+</head>
+<body>
+	<header>
+		<div id="header-inner">
+			<a href="http://campovski.eu" id="logo"></a>
+			<nav>
+				<a href="#" id="menu-icon"></a>
+				<ul>
+					<!--<li><a href="#" class="current">Home</a></li>-->
+					<li><a href="#">About me</a></li>
+					<li><a href="#">Sponsors</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+<!-- END OF HEADER -->
+	<section class="banner">
+		<div class="banner-inner">
+			<img src="{% static 'images/rocket_design.png' %}">
+		</div>
+	</section>
+<!-- END OF BANNER -->
+	<div class="columns">
+		<a href="http://campovski.eu/beer/" target="_blank">
+			<div class="section-wrapper" id="beer-wrapper">
+				<img class="img-section" src="{% static 'images/beer.JPG' %}">
+				<section class="one-fourth" id="beer">
+					<td><i class="fa fa-beer"></i></td>
+					<h3>BEER</h3>
+				</section>
+			</div>
+		</a>
+		<a href="http://campovski.eu/burger/" target="_blank">
+			<div class="section-wrapper" id="burger-wrapper">
+				<img class="img-section" src="{% static 'images/burger.JPG' %}">
+				<section class="one-fourth" id="burger">
+					<td><i class="fa fa-cutlery"></i></td>
+					<h3>BURGER</h3>
+				</section>
+			</div>
+		</a>
+		<a href="http://math.campovski.eu/" target="_blank">
+			<div class="section-wrapper" id="maths-wrapper">
+				<img class="img-section" src="{% static 'images/maths.JPG' %}">
+				<section class="one-fourth" id="maths">
+					<td><i class="fa fa-usd"></i></td>
+					<h3>MATHS</h3>
+				</section>
+			</div>
+		</a>
+		<a href="http://campovski.eu/teacoffee" target="_blank">
+			<div class="section-wrapper" id="code-wrapper">
+				<img class="img-section" src="{% static 'images/tea.JPG' %}">
+				<section class="one-fourth" id="code">
+					<td><i class="fa fa-coffee"></i></td>
+					<h3>TEA & COFFEE</h3>
+				</section>
+			</div>
+		</a>
+	</div>
+<!-- END OF FOUR COLUMNS -->
+	<section id="heart">
+		<h2>&lt;3</h2>
+	</section>
+<!-- END OF HEART -->
+	<footer>
+		<ul class="social">
+			<li><a href="https://www.facebook.com/marcel.campa" target="_blank"><i class="fa fa-facebook"></i></a></li>
+			<li><a href="mailto:campovski@gmail.com" target="_blank"><i class="fa fa-google"></i></a></li>
+			<li><a href="https://github.com/campovski" target="_blank"><i class="fa fa-github"></i></a></li>
+		</ul>
+	</footer>
+<!-- END OF SOCIAL FOOTER -->
+	<footer class="socket">
+		<p>&copy; Marcel Campovski, 2017</p>
+	</footer>
+<!-- END OF SOCKET -->
+</body>
+</html>
