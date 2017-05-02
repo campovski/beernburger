@@ -1,0 +1,58 @@
+<html>
+
+{% load static %}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Campovski's Beer Reviews</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon1.png' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/beer_index.css' %}" />
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <header>
+        <div id="header-inner">
+            <a href="http://campovski.eu" id="logo"></a>
+            <nav>
+             <!--   <a href="#" id="menu-icon">Sort</a>
+                <ul id="menu">
+                    <li><a href="">id (ascending)</a></li>
+                    <li><a href="">id (descending)</a></li>
+                    <li><a href="">name (ascending)</a></li>
+                    <li><a href="">name (descending)</a></li>
+                </ul>-->
+                <form action="#">
+			<input type="button" id="goto" onclick="window.location.href='http://campovski.eu/beer/';" value="Cancel" />
+		</form>
+            </nav>
+        </div>
+    </header>
+<!-- END OF HEADER -->
+    <div id="page">
+        {% if query == 'beer_type' %}
+            <div id="major_types">
+                <p>Major beer types:</p>
+                <ul class="browse" id="hardcoded">
+                    <li><a href="{% url 'beer:browse_item' query=query item='ale' %}">Ale</a></li>
+                    <li><a href="{% url 'beer:browse_item' query=query item='lager' %}">Lager</a></li>
+                    <li><a href="{% url 'beer:browse_item' query=query item='ipa' %}">IPA</a></li>
+                    <li><a href="{% url 'beer:browse_item' query=query item='weiss' %}">Weissbier / Weizenbier</a></li>
+                    <li><a href="{% url 'beer:browse_item' query=query item='lambic' %}">Lambic</a></li>
+                    <li><a href="{% url 'beer:browse_item' query=query item='pilsner' %}">Pilsner</a></li>
+                    <li><a href="{% url 'beer:browse_item' query=query item='stout' %}">Stout</a></li>
+                    <li><a href="{% url 'beer:browse_item' query=query item='porter' %}">Porter</a></li>
+                </ul>
+            {% endif %}
+        <div id="from_db">
+            <p>Types in database:</p>
+            <ul class="browse">
+                {% for result in resultset %}
+                    <li><a href="http://campovski.eu/beer/browse={{ query }}/for={{ result }}/">{{ result }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

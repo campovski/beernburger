@@ -28,9 +28,7 @@ def detail(request, torc_id):
 	raise Http404('Incorrect torc_id')
 
 def search(request, query):
-	names = Torc.objects.filter(name__icontains=query.lower())
-	brewers = Torc.objects.filter(name__icontains=query.lower())
-	union = (names | makers).distinct()
+	union = Torc.objects.filter(name__icontains=query.lower())
 	if union:
 		return render(request, 'torc/search.html', { 'all_torcs': union })
 	return HttpResponse("<h1>You searched for: {0}".format(query))

@@ -29,9 +29,7 @@ def detail(request, burger_id):
 
 
 def search(request, query):
-	names = Burger.objects.filter(name__icontains=query.lower())
-	makers = Burger.objects.filter(name__icontains=query.lower())
-	union = (names | makers).distinct()
+	union = Burger.objects.filter(name__icontains=query.lower())
 	if union:
 		return render(request, 'burger/search.html', { 'all_burgers': union })
 	return HttpResponse("<h1>You searched for: {0}".format(query))

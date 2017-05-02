@@ -18,7 +18,10 @@
             <nav>
              <a href="#" id="menu-icon"></a>
                 <ul id="menu">
-                    <li>Sort by:</li>
+                    <li>BROWSE BY:</li>
+                    <li><a href="{% url 'beer:browse' 'brewer' %}">brewer</a></li>
+                    <li><a href="{% url 'beer:browse' 'beer_type' %}">type</a></li>
+                    <li>SORT BY:</li>
                     <li><a href="{% url 'beer:sort' 'grade_total' %}">grade (asc)</a></li>
                     <li><a href="{% url 'beer:sort' '-grade_total' %}">grade (desc)</a></li>
                     <li><a href="{% url 'beer:sort' 'id' %}">id (asc)</a></li>
