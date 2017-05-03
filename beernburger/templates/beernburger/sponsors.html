@@ -1,0 +1,32 @@
+<html>
+
+{% load static %}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Campovski's Beer Reviews</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon1.png' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/beer_index.css' %}" />
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <header>
+        <div id="header-inner">
+            <a href="http://campovski.eu" id="logo"></a>
+            <nav>
+                <form action="#">
+			<input type="button" id="goto" onclick="window.location.href='http://campovski.eu/';" value="Cancel" />
+		</form>
+            </nav>
+        </div>
+    </header>
+<!-- END OF HEADER -->
+    <div id="browse_menu">
+        <div id="browse_brewers">
+            <p>Sponsors:</p>
+        </div>
+    </div>
+</body>
+</html>
