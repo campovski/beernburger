@@ -163,3 +163,89 @@ nav ul li a:hover {
 		width: 25%;
 	}
 }
+
+
+
+
+/* BROWSE */
+#browse_menu {
+	font-size: 150%;
+	max-width: 800px;
+	margin: auto;
+	display: block;
+	padding-top: 100px;
+}
+
+#major_types {
+	float: left;
+}
+
+#major_types p {
+	font-family: 'Alegreya Sans', sans-serif;
+	font-size: 180%;
+}
+
+.items {
+	margin: 2% 5% 0 15%;
+	list-style: disc outside none;A
+	font-family: 'Alegreya Sans', sans-serif;
+}
+
+.items li a {
+	text-decoration: none;
+}
+
+.items li a:hover {
+	text-decoration: underline;
+}
+
+#from_db {
+	float: right;
+}
+
+#from_db p {
+	font-family: 'Alegreya Sans', sans-serif;
+	font-size: 180%;
+}
+
+#browse_brewers {
+	padding-left: 20%;
+}
+
+#browse_brewers p {
+	font-size: 180%;
+}
+
+@media screen and (max-width: 768px) {
+	#browse_menu {
+		max-width: 500px;
+		padding-top: 60px;
+		font-size: 120%;
+	}
+
+	#major_types {
+		float: none;
+		padding: 0 0 15% 10%;
+	}
+
+	#major_types p {
+		font-size: 150%;
+	}
+
+	#from_db {
+		float: none;
+		padding-left: 10%;
+	}
+
+	#from_db p {
+		font-size: 150%;
+	}
+
+	#browse_brewers {
+		padding-left: 10%;
+	}
+
+	#browse_brewers p {
+		font-size: 150%;
+	}
+}
