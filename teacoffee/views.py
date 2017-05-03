@@ -32,3 +32,14 @@ def search(request, query):
 	if union:
 		return render(request, 'torc/search.html', { 'all_torcs': union })
 	return HttpResponse("<h1>You searched for: {0}".format(query))
+
+def browse(request):
+        makers = list(Torc.objects.values_list('maker', flat=True).distinct())
+        resultset = list(Manufacturer.objects.filter(pk__in=makers).values_list('name', flat=True).order_by('name'))
+        return render(request, 'teacoffee/browse.html', { 'resultset': resultset })
+
+def browse_item(request, item):
+        maker = Manufacturer.objects.filter(name=item).first()
+        resultset = Torc.objects.filter(maker=maker.id)
+        return render(request, 'teacoffee/search.html', { 'all_torcs': resultset })
+

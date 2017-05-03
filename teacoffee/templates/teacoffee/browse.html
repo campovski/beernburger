@@ -30,16 +30,13 @@
         </div>
     </header>
 <!-- END OF HEADER -->
-    <div id="page">
-        {% for torc in all_torcs %}
-            <div class="tile">
-                <a href="{% url 'torc:detail' torc.id %}">
-                    {% with 'images/'|add:torc.image_tile as tile %}
-                        <img src="{% static tile %}" alt="{{ torc.name }}">
-                    {% endwith %}
-                </a>
-            </div>
-        {% endfor %}
+    <div id="browse_menu">
+        <p>Tea & coffee makers in database:</p>
+        <ul class="items">
+            {% for result in resultset %}
+                <li><a href="{% url 'teacoffee:browse_item' result %}/">{{ result }}</a></li>
+            {% endfor %}
+        </ul>
     </div>
 </body>
 </html>

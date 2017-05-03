@@ -55,7 +55,7 @@
         {% endif %}
             <ul class="items">
                 {% for result in resultset %}
-                    <li><a href="http://campovski.eu/beer/browse={{ query }}/for={{ result }}/">{{ result }}</a></li>
+                    <li><a href="{% url 'beer:browse_item' query=query item=result %}/">{{ result }}</a></li>
                 {% endfor %}
             </ul>
         </div>

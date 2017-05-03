@@ -24,22 +24,19 @@
                     <li><a href="">name (descending)</a></li>
                 </ul>-->
                 <form action="#">
-			<input type="button" id="goto" onclick="window.location.href='http://campovski.eu/teacoffee/';" value="Cancel" />
+			<input type="button" id="goto" onclick="window.location.href='http://campovski.eu/burger/';" value="Cancel" />
 		</form>
             </nav>
         </div>
     </header>
 <!-- END OF HEADER -->
-    <div id="page">
-        {% for torc in all_torcs %}
-            <div class="tile">
-                <a href="{% url 'torc:detail' torc.id %}">
-                    {% with 'images/'|add:torc.image_tile as tile %}
-                        <img src="{% static tile %}" alt="{{ torc.name }}">
-                    {% endwith %}
-                </a>
-            </div>
-        {% endfor %}
+    <div id="browse_menu">
+        <p>Brewers in database:</p>
+        <ul class="items">
+            {% for result in resultset %}
+                <li><a href="{% url 'burger:browse_item' result %}/">{{ result }}</a></li>
+            {% endfor %}
+        </ul>
     </div>
 </body>
 </html>

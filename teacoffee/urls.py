@@ -15,4 +15,10 @@ urlpatterns = [
 	
 	# /teacoffee/sort=<sort_by>/
 	url(r'sort=(?P<sort_by>[\s\S]+)/$', views.index, name='sort'),
+
+	# /teacoffe/browse=maker/for=<item>/
+        url(r'browse=maker/for=(?P<item>[\s\S]+)/$', views.browse_item, name='browse_item'),
+
+        # /teacoffee/browse=maker/
+        url(r'browse=maker/$', views.browse, name='browse'),
 ]

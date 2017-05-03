@@ -24,18 +24,18 @@
                     <li><a href="">name (descending)</a></li>
                 </ul>-->
                 <form action="#">
-			<input type="button" id="goto" onclick="window.location.href='http://campovski.eu/beer/';" value="Cancel" />
+			<input type="button" id="goto" onclick="window.location.href='http://campovski.eu/burger/';" value="Cancel" />
 		</form>
             </nav>
         </div>
     </header>
 <!-- END OF HEADER -->
     <div id="page">
-        {% for beer in all_beers %}
+        {% for burger in all_burgers %}
             <div class="tile">
-                <a href="{% url 'beer:detail' beer.id %}">
-                    {% with 'images/'|add:beer.image_tile as tile %}
-                        <img src="{% static tile %}" alt="{{ beer.name }}">
+                <a href="{% url 'burger:detail' burger.id %}">
+                    {% with 'images/'|add:burger.image_tile as tile %}
+                        <img src="{% static tile %}" alt="{{ burger.name }}">
                     {% endwith %}
                 </a>
             </div>

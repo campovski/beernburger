@@ -33,3 +33,14 @@ def search(request, query):
 	if union:
 		return render(request, 'burger/search.html', { 'all_burgers': union })
 	return HttpResponse("<h1>You searched for: {0}".format(query))
+
+
+def browse(request):
+        makers = list(Burger.objects.values_list('maker', flat=True).distinct())
+        resultset = list(Manufacturer.objects.filter(pk__in=makers).values_list('name', flat=True).order_by('name'))
+       	return render(request, 'burger/browse.html', { 'resultset': resultset })
+
+def browse_item(request, item):
+        maker = Manufacturer.objects.filter(name=item).first()
+        resultset = Burger.objects.filter(maker=maker.id)
+        return render(request, 'burger/search.html', { 'all_burgers': resultset })
