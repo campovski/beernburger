@@ -275,10 +275,6 @@ footer {
 		font-size: 100%;
 	}
 	
-	header {
-		position: absolute;
-	}
-	
 	#logo {
 		margin: 15px 0 20px -25px;
 		background: url(../images/logo_mobile.png) no-repeat center;
@@ -311,9 +307,9 @@ footer {
 		padding: 10px 0;
 	}
 	
-	.banner {
+	/*.banner {
 		padding-top: 86px;
-	}
+	}*/
 	
 	.section-wrapper {
 		float: left;
