@@ -187,7 +187,7 @@ nav ul li a:hover {
 
 .items {
 	margin: 2% 5% 0 15%;
-	list-style: disc outside none;A
+	list-style: disc outside none;
 	font-family: 'Alegreya Sans', sans-serif;
 }
 
@@ -209,11 +209,34 @@ nav ul li a:hover {
 }
 
 #browse_brewers {
-	padding-left: 15%;
+	padding: 0 15%;
 }
 
-#browse_brewers p {
+#browse_brewers p.title_about {
 	font-size: 180%;
+}
+
+#major_types p.desc_about {
+	font-size: 100%;
+}
+
+#major_types #grades_explained {
+	font-family: 'Alegreya Sans', sans-serif;
+	font-size: 100%;
+	padding: 2% 5%;
+}
+
+#from_db p.title_about {
+	font-size: 180%;
+}
+
+#from_db p.desc_about {
+	font-size: 100%;
+}
+
+.desc_about {
+	text-align: justify;
+	font-size: 120%;
 }
 
 @media screen and (max-width: 768px) {
@@ -225,7 +248,7 @@ nav ul li a:hover {
 
 	#major_types {
 		float: none;
-		padding: 0 0 15% 10%;
+		padding: 0 10%;
 	}
 
 	#major_types p {
@@ -234,7 +257,8 @@ nav ul li a:hover {
 
 	#from_db {
 		float: none;
-		padding-left: 10%;
+		padding: 0 10%;
+		margin-bottom: 30px;
 	}
 
 	#from_db p {
@@ -242,10 +266,15 @@ nav ul li a:hover {
 	}
 
 	#browse_brewers {
-		padding-left: 10%;
+		padding: 0 10%;
 	}
 
-	#browse_brewers p {
+	#browse_brewers p.title_about {
 		font-size: 150%;
+	}
+
+	.desc_about {
+		font-size: 120%;
+		text-align: justify;
 	}
 }

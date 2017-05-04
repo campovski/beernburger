@@ -33,7 +33,7 @@
     <div id="browse_menu">
         {% if query == 'beer_type' %}
             <div id="major_types">
-                <p>Major beer types:</p>
+                <p class="title_about">Major beer types:</p>
                 <ul class="items" id="hardcoded">
                     <li><a href="{% url 'beer:browse_item' query=query item='ale' %}">Ale</a></li>
                     <li><a href="{% url 'beer:browse_item' query=query item='lager' %}">Lager</a></li>
@@ -48,10 +48,10 @@
         {% endif %}
         {% if query == 'beer_type' %}
             <div id="from_db">
-                <p>Types in database:</p>
+                <p class="title_about">Types in database:</p>
         {% else %}
             <div id="browse_brewers">
-                <p>Brewers in database:</p>
+                <p class="title_about">Brewers in database:</p>
         {% endif %}
             <ul class="items">
                 {% for result in resultset %}
