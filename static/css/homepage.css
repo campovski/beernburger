@@ -117,6 +117,10 @@ nav ul li a:hover {
 	margin: 0 auto;
 }
 
+#small {
+	display: none;
+}
+
 /*-- I did this myself - prepared for image background --*/
 .columns {
 
@@ -310,7 +314,15 @@ footer {
 	/*.banner {
 		padding-top: 86px;
 	}*/
-	
+
+	#big {
+		display: none;
+	}
+
+	#small {
+		display: block;
+	}
+
 	.section-wrapper {
 		float: left;
 		width: 100%;
