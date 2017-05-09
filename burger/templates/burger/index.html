@@ -47,7 +47,7 @@
     <div id="page">
         {% for burger in all_burgers %}
             <div class="tile">
-                <a href="{% url 'burger:detail' beer.id %}">
+                <a href="{% url 'burger:detail' burger.id %}">
                     {% with 'images/'|add:burger.image_tile as tile %}
                         <img src="{% static tile %}" alt="{{ burger.name }}">
                     {% endwith %}
