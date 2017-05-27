@@ -20,20 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-def generate_secret_key(path):
-	from django.utils.crypto import get_random_string
-	chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+'
-	x = get_random_string(50, chars)
-	with open(path, 'w') as f:
-		f.write('SECRET_KEY = {0}'.format(x))
-
-try:
-	from .secret_key import SECRET_KEY
-except ImportError:
-	settings_dir = os.path.abspath(os.path.dirname(__file__))
-	generate_secret_key(os.path.join(settings_dir, 'secret_key.py'))
-	from .secret_key import SECRET_KEY
-
+SECRET_KEY = '#yjef_b317a=(o3wxx!3=jlbn=f618&e5+6ytow_9l_!ub-jjr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True 
@@ -94,10 +81,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'beernburger',
-	'USER': 'test_user',
-	'PASSWORD': 'test_user_pwd123',
-	'HOST': 'localhost',
-	'PORT': '',
+        'USER': 'test_user',
+        'PASSWORD': 'test_user_pwd123',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 

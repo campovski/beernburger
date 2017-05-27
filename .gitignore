@@ -55,7 +55,6 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
-settings.py
 
 # Flask stuff:
 instance/
@@ -90,4 +89,3 @@ bnbenv/
 
 # Rope project settings
 .ropeproject
->>>>>>> ebc2c82b0961f4a568690c8d2e53538768c010cc
